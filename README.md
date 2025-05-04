@@ -2,7 +2,7 @@
 
 Dyscalculia is a learning disability that impacts a person's ability to understand numbers and perform mathematical calculations.
 
-One would think the venerable UNIX `diff` and `patch` tools would be the perfect for AIs to edit code.
+One would think the venerable UNIX `diff` and `patch` tools would be perfect for AIs to edit code.
 
 Unfortunately, AIs have trouble outputting valid unified diffs, mostly due to their dyscalculia.
 
