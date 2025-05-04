@@ -63,6 +63,9 @@ def validate_patch(patch_text):
     print(patch_text, end='')
     sys.exit(0)
 
-if __name__ == "__main__":
+def main():
     validate_patch(sys.stdin.read())
+
+if __name__ == "__main__":
+    main()
 
