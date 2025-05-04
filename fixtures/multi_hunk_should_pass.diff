@@ -1,0 +1,27 @@
+--- a/tests/pages/anonymized.spec.js
++++ b/tests/pages/anonymized.spec.js
+@@ -126,5 +126,6 @@
+    axiosMock.onGet(/Example\/endpoint\?id=sample&trace=sample456/).reply(200, sampleData);
+    // Sample comment
++    await sampleFunction();
+    wrapper.vm.sampleVar = 'sample456';
+    await wrapper.vm.sampleAction();
+    await sampleFunction();
+@@ -146,5 +147,6 @@
+    axiosMock.onGet(/Example\/endpoint\?id=sample&trace=sample456/).reply(500, 'Error');
+    const mockSpy = jest.spyOn(MockLib, 'fire');
++    await sampleFunction();
+    wrapper.vm.sampleVar = 'sample456';
+    await wrapper.vm.sampleAction();
+    await sampleFunction();
+@@ -155,5 +157,10 @@
+      expect.objectContaining({title: "Sample error", icon: "warning"})
+    );
+  });
++
++  it('should handle empty sampleVar', async () => {
++    await wrapper.vm.sampleAction();
++    expect(wrapper.vm.isLoading).toBe(false);
++  });
+  describe('sample functions', () => {
+    it('sampleFunction() should format correctly', () => {

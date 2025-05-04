@@ -1,0 +1,11 @@
+--- a/tests/pages/anonymized.spec.js
++++ b/tests/pages/anonymized.spec.js
+@@ -129,7 +129,7 @@
+       sampleUrl: 'http://example.url',
+       organizations: {1: {name: 'Sample Clinic'}}
+     };
+-    axiosMock.onGet(/Endpoint\/path\?id=testId&traceId=test123/).reply(200, mockData);
++    axiosMock.onGet(/Endpoint\/path\?(?=.*id=sample)(?=.*trace=sample456)/).reply(200, sampleData);
+
+     // Set traceId and trigger refresh
+     wrapper.vm.sampleVar = 'sample456';

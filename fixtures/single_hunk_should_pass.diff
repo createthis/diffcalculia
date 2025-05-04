@@ -1,0 +1,19 @@
+--- a/Example.Web.ClientUI/tests/pages/sample.spec.js
++++ b/Example.Web.ClientUI/tests/pages/sample.spec.js
+@@ -215,4 +215,15 @@ describe('Sample Component', () => {
+       
+      // Note: Sample comment about implementation
+    });
++
++    it('sampleFunction() should format correctly', () => {
++      // Test with valid input
++      expect(wrapper.vm.sampleFunction(123456789)).toMatch(/\d{1,2}\/\d{1,2}\/\d{4}, \d{1,2}:\d{2}:\d{2} [AP]M/);
++
++      // Test with zero
++      expect(wrapper.vm.sampleFunction(0)).toBe('N/A');
++
++      // Test with special case
++      expect(wrapper.vm.sampleFunction(-123456)).toBe('special');
++    });
+  });
+}
