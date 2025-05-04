@@ -38,8 +38,12 @@ If you want your agentic coder to utilize `diff` and `patch` to edit files, simp
    EOF
    ```
    
-   `patch` notoriously has very unhelpful error messages. The `diffcalculia --fix` command will give you helpful error 
-   messages in case your patch is malformed. It will even fix minor line count discrepancies for you automatically!
+   `patch` notoriously has very unhelpful error messages. The `diffcalculia --fix`
+   command will give you helpful error messages in case your patch is malformed.
+   It will even fix minor line count discrepancies for you automatically!
+
+3. Use `patch` to edit files and add tests. DO NOT USE str_replace_editor. It has
+   trouble with large files.
 ````
 
 ## Running Tests
