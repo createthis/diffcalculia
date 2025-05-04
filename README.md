@@ -18,7 +18,7 @@ Open Hands AI mounts the project at `/workspace`.
 If you want your agentic coder to utilize `diff` and `patch` to edit files, simply copy and paste this snippet into your prompt:
 
 ````
-# File Editing
+# File Reading and Editing
 
 1. Run this once via bash:
 
@@ -38,12 +38,14 @@ If you want your agentic coder to utilize `diff` and `patch` to edit files, simp
    EOF
    ```
    
-   `patch` notoriously has very unhelpful error messages. The `diffcalculia --fix`
-   command will give you helpful error messages in case your patch is malformed.
-   It will even fix minor line count discrepancies for you automatically!
+   The `diffcalculia --fix` command will fix minor line count discrepancies for 
+   you automatically!
 
 3. Use `patch` to edit files and add tests. DO NOT USE str_replace_editor. It has
    trouble with large files.
+
+4. Use `cat -n /path | sed -E 's/^([[:space:]]*[0-9]+)\t/\1|/'` to read files. DO 
+   NOT USE str_replace_editor. It will truncate large files.
 ````
 
 ## Running Tests
