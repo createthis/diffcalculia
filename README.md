@@ -35,7 +35,7 @@ If you want your agentic coder to utilize `diff` and `patch` to edit files, simp
 
    ```bash
    cat << 'EOF' | diffcalculia --fix | \
-     patch -p0 --ignore-whitespace --verbose -r - -V never /workspace/file_to_edit
+     patch -p0 --ignore-whitespace --verbose -r- --no-backup-if-mismatch /workspace/file_to_edit
    YOUR_DIFF_HERE
    EOF
    ```
