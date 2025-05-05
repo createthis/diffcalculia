@@ -28,6 +28,8 @@ If you want your agentic coder to utilize `diff` and `patch` to edit files, simp
    python3 -m pip install --force-reinstall git+https://github.com/createthis/diffcalculia.git
    ```
 
+   DO NOT FORGET THIS STEP! IF YOU DO, `diffcalculia` WILL NOT BE INSTALLED!
+
 2. You can edit a file with the `patch` CLI command, via the execute_bash tool.
    Call `patch` like this, replacing YOUR_DIFF_HERE with your diff:
 
