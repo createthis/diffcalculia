@@ -11,6 +11,9 @@ This tool is meant to be used by AIs as a crutch in generating valid unified dif
 
 ## Usage
 
+### Typescript Port
+FYI, the Typescript port is here: https://github.com/createthis/diffcalculia-ts
+
 ### Open Hands AI
 
 Open Hands AI mounts the project at `/workspace`.
