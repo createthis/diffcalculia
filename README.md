@@ -46,6 +46,8 @@ If you want your agentic coder to utilize `diff` and `patch` to edit files, simp
    The `diffcalculia --fix` command will fix minor line count discrepancies for 
    you automatically!
 
+   NOTE: You **MUST** use unified diff format. Do **NOT** use context-diff format.
+
 3. Use `patch` to edit files and add tests. DO NOT USE str_replace_editor. It has
    trouble with large files.
 
@@ -89,6 +91,8 @@ With `str_replace_editor` disabled, our prompt becomes less complex:
    
    The `diffcalculia --fix` command will fix minor line count discrepancies for 
    you automatically!
+
+   NOTE: You **MUST** use unified diff format. Do **NOT** use context-diff format.
 
 3. Use `patch` to edit files and add tests.
 
